@@ -4,70 +4,81 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <title>GIPHY API</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<meta charset="UTF-8">
+	<title>GIPHY API</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <div class="container">
+	<div class="container">
 
-        <br>
+		<br>
 
-        <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1 class="text-center">GIPHY API</h1>
+		<!-- Jumbotron -->
+		<div class="jumbotron">
+			<h1 class="text-center">MUSIC GIPHY API</h1>
 		</div>
-		
+
 		<!-- Buttons -->
 
-        <div class="row">
-            <button type="button" class="btn btn-outline-success btn-sm">Random</button>
+		<div class="row">
+			<div id="artistBtns">
+
+			</div>
 		</div>
+
 		<hr>
 
-        <div class="row">
-
-            <!--GIPHY TITLE-->
-            <div class="col-lg-6">
-                <div class="card card-default">
-                    <div class="card-heading">
-                        <h3 class="card-title">Giphy Images</h3>
+		<div class="row">
+			<!-- Search GIPHY-->
+			<div class="col-lg-6">
+				<div class="card card-default">
+					<div class="card-heading">
+						<h3 class="card-title">Find your favorite artist</h3>
 					</div>
-					
-                    <div class="card-body">
-                        <!-- GIPHY IMAGES SHOW HERE-->
-                            <div id="images">
-                                
-                            </div>
-                            
-                    </div>
-                </div>
-            </div>
+					<div class="form-group">
+						<form id="artist-form">
+							<label for="newArtistInput">Add your favorite artist: </label>
+							<input type="text" id="newArtistInput">
+							<br>
+							<input id="addArtist" type="submit" value="Submit">
 
-            <!-- Search GIPHY-->
-            <div class="col-lg-6">
-                <div class="card card-default">
-                    <div class="card-heading">
-                        <h3 class="card-title">Search</h3>
-                    </div>
-                    <div class="form-group">
-						
-						<input type="text" class="form-control" id="search-term">
-						<button type="button" class="btn btn-outline-info">Search</button>
-					  </div>
-                </div>
-            </div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+				<!--GIPHY TITLE-->
+				<div class="col-lg-6">
+					<div class="card card-default">
+						<div class="card-heading">
+							<h3 class="card-title">Giphy Images</h3>
+						</div>
 
-        </div>
+						<div class="card-body">
+							<!-- GIPHY IMAGES SHOW HERE-->
+							<div id="images">
 
-    </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			</div>
+			
 
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="assets/javascript/app.js"></script>
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 
