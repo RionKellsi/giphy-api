@@ -1,3 +1,18 @@
 body {
-    background-image: url(http://cak-zamek.pl/wp-content/uploads/2015/10/music-notes-background-wallpaper.jpg)
+    background-image: url(http://wallpaperinfinity.net/wp-content/uploads/2018/01/cool-art-music-wallpaper.jpg);
+    background-position-x: 75%;
+    font-family: 'Handlee', cursive;
+}
+
+.jumbotron {
+    background: transparent;
+    
+}
+
+h1 {
+    color: white;
+}
+
+#images {
+    overflow: hidden;
 }

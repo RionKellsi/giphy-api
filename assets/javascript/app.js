@@ -13,12 +13,12 @@ function createGifButtons() {
         // create buttons for each artist.
         var gifButton = $("<button>");
         gifButton.addClass("artist-btn");
-        gifButton.addClass("btn btn-outline-success btn-sm");
+        gifButton.addClass("btn btn-outline-primary btn-sm");
         gifButton.attr("data-name", musicArtist[i]);
         gifButton.text(musicArtist[i]);
         $("#artistBtns").append(gifButton);
     }
-
+    //pull GIF's from API 
     $(".artist-btn").on("click", function () {
         $("#images").empty();
         var currentArtist = $(this).data("name");
@@ -48,6 +48,7 @@ function createGifButtons() {
             });
         });
     });
+    //pause & play Gif's on Hover 
     $(document).on("mouseover", ".playOnHover", function () {
         $(this).attr("src", $(this).data("animated"));
     });
@@ -55,7 +56,7 @@ function createGifButtons() {
         $(this).attr("src", $(this).data("paused"));
     });
 
-    //sets a button from input
+    //sets a button from user artist Input
     $('#addArtist').on('click', function () {
         var newArtist = $("#newArtistInput").val().trim();
         musicArtist.push(newArtist);
