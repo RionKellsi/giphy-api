@@ -41,7 +41,7 @@ function createGifButtons() {
                     theRating = "untrated";
                 }
                 var rating = $("<h4>").html("Rated: " + theRating).addClass("ratingStyle");
-                stillGif = $("<img>").attr("data-animate", animatedGif).attr("data-paused", pausedGif).attr("src", pausedGif).addClass("playOnHover");
+                stillGif = $("<img>").attr("data-animated", animatedGif).attr("data-paused", pausedGif).attr("src", pausedGif).addClass("playOnHover");
                 var fullGifDisplay = $("<button>").append(rating, stillGif)
                 $("#images").append(fullGifDisplay)
 
