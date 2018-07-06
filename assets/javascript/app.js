@@ -37,7 +37,7 @@ function createGifButtons() {
                 animatedGif = value.images.original.url;
                 pausedGif = value.images.original_still.url;
                 var theRating = value.rating;
-                if (theRating == "") {
+                if (theRating == " ") {
                     theRating = "untrated";
                 }
                 var rating = $("<h4>").html("Rated: " + theRating).addClass("ratingStyle");
@@ -48,36 +48,23 @@ function createGifButtons() {
             });
         });
     });
+    $(document).on("mouseover", ".playOnHover", function () {
+        $(this).attr("src", $(this).data("animated"));
+    });
+    $(document).on("mouseleave", ".playOnHover", function () {
+        $(this).attr("src", $(this).data("paused"));
+    });
+
+    //sets a button from input
+    $('#addArtist').on('click', function () {
+        var newArtist = $("#newArtistInput").val().trim();
+        musicArtist.push(newArtist);
+        createGifButtons();
+        $("#newArtistInput").empty();
+        return false;
+    });
 };
 
-function pausePlayGifs() {
-    var state = $(this).attr("data-state");
-   if (state === "still") {
-     $(this).attr("src", $(this).attr("data-animate"));
-     $(this).attr("data-state", "animate");
-   } else {
-     $(this).attr("src", $(this).attr("data-still"));
-     $(this).attr("data-state", "still");
-}
-}
 
-$(document).on("click", ".artist-btns", pausePlayGifs());
-
-
-// $(document).on("mouseover", ".playOnHover", function () {
-//     $(this).attr("src", $(this).data("animated"));
-// });
-// $(document).on("mouseleave", ".playOnHover", function () {
-//     $(this).attr("src", $(this).data("paused"));
-// });
-
-//sets a button from input
-$('#addArtist').on('click', function () {
-    var newArtist = $("#newArtistInput").val().trim();
-    musicArtist.push(newArtist);
-    createGifButtons();
-    $("#newArtistInput").empty();
-    return false;
-});
 
 createGifButtons();
