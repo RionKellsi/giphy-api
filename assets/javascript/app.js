@@ -61,7 +61,7 @@ function createGifButtons() {
         var newArtist = $("#newArtistInput").val().trim();
         musicArtist.push(newArtist);
         createGifButtons();
-        $("#newArtistInput").empty();
+        $("#newArtistInput").val("");
         return false;
     });
 };

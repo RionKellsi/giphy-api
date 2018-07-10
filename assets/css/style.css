@@ -3,8 +3,7 @@ body {
     background-position-x: 75%;
     font-family: 'Handlee', cursive;
 }
-
-.jumbotron {
+ .jumbotron {
     background: transparent;
     
 }
@@ -16,3 +15,4 @@ h1 {
 #images {
     overflow: hidden;
 }
+
