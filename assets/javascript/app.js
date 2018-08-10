@@ -22,7 +22,7 @@ function createGifButtons() {
     $(".artist-btn").on("click", function () {
         $("#images").empty();
         var currentArtist = $(this).data("name");
-        var gifyUrl = "http://api.giphy.com/v1/gifs/search?q=" + currentArtist + "&api_key=1QfM2fd49lZJ5CbDFYZP72N2gmieBEIY&limit=10";
+        var gifyUrl = "https://api.giphy.com/v1/gifs/search?q=" + currentArtist + "&api_key=1QfM2fd49lZJ5CbDFYZP72N2gmieBEIY&limit=10";
         console.log(gifyUrl)
         $.ajax({
             url: gifyUrl,
